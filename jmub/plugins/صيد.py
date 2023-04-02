@@ -107,7 +107,7 @@ def gen_user(choice):
 async def _(event):
     await event.edit(
         """
-أوامر الصيد الخاصة بسورس جمثون : 
+أوامر الصيد الخاصة بسورس افاتار : 
 
 ٴ— — — — — — — — — —
 
