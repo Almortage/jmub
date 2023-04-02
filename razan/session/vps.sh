@@ -3,8 +3,8 @@
 JMTHON="\nJMTHON USERBOT DEPLOY ON VPS"
 JMTHON+="\n "
 JMTHON+="\n "
-JMTHON+="\n★ Channel: @JMTHON ★"
-JMTHON+="\n★ Support: @jmthon_support ★"
+JMTHON+="\n★ Channel: @source_av ★"
+JMTHON+="\n★ Support: @va_source ★"
 JMTHON+="\n "
 ROZ="\n "
 echo -e $JMTHON
@@ -71,12 +71,12 @@ echo "⚙️ Environment "
 echo -e $ROZ
 
 # Generate a random password  - باسوورد عشوائي لقاعدة البيانات   xD
-PASSWORD=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+PASSWORD=$(cat /dev/urandom | tr -dc  a-zA-Z0-9  | fold -w 32 | head -n 1)
 
 # Connect to the PostgreSQL interactive terminal
 sudo su - postgres -c "psql" <<EOF
 
-ALTER USER postgres WITH PASSWORD '$PASSWORD';
+ALTER USER postgres WITH PASSWORD  $PASSWORD ;
 
 CREATE DATABASE jmthon;
 
