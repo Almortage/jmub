@@ -3,7 +3,7 @@ from logging import getLogger
 from os import listdir, path
 from typing import Any, Dict, List, Union
 
-LOGS = getLogger("jmthon")
+LOGS = getLogger("jmthonavatar")
 
 try:
     from google_trans_new import google_translator
