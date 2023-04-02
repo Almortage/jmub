@@ -10,7 +10,7 @@
 </h3>
 
  ------
-[Catuserbot](https://github.com/TgCatUB/catuserbot)
-- 💖 [Team jmthon](https://t.me/jmthon)
+
+- 💖[𝘼𝙑⍢⃝𝙎𝙊𝙐𝙍𝘾𝞝](https://t.me/jmthon)
 
 ------
