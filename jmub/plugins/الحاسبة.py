@@ -41,7 +41,7 @@ lst.append([Button.inline("=", data="calc=")])
 @jmub.ar_cmd(pattern="الحاسبة(?:\s|$)([\s\S]*)")
 async def icalc(e):
     if e.client._bot:
-        return await e.reply("**الحاسبة العلمية لسورس جمثون\n @jmub**", buttons=lst)
+        return await e.reply("**الحاسبة العلمية لسورس افاتار\n @source_av**", buttons=lst)
     results = await e.client.inline_query(Config.TG_BOT_USERNAME, "calc")
     await results[0].click(e.chat_id, silent=True, hide_via=True)
     await e.delete()
@@ -57,7 +57,7 @@ async def inlinecalc(event):
     ) and string == "calc":
         event.builder
         calc = event.builder.article(
-            "Calc", text="**الحاسبة العلمية لسورس جمثون\n @jmub**", buttons=lst
+            "Calc", text="**الحاسبة العلمية لسورس افاتار\n @source_av**", buttons=lst
         )
         await event.answer([calc])
 
@@ -73,7 +73,7 @@ async def _(e):  # sourcery no-metrics
         if CALC.get(user):
             CALC.pop(user)
         await e.edit(
-            "**الحاسبة العلمية لسورس جمثون\n @jmub**",
+            "**الحاسبة العلمية لسورس افاتار\n @source_av**",
             buttons=[Button.inline("افتح مره اخرى", data="recalc")],
         )
     elif x == "C":
@@ -157,4 +157,4 @@ async def _(e):
     tultd = [Button.inline(f"{x}", data=f"calc{x}") for x in m]
     lst = list(zip(tultd[::4], tultd[1::4], tultd[2::4], tultd[3::4]))
     lst.append([Button.inline("=", data="calc=")])
-    await e.edit("**الحاسبة العلمية لسورس جمثون\n @jmub**", buttons=lst)
+    await e.edit("**الحاسبة العلمية لسورس افاتار\n @source_av**", buttons=lst)
