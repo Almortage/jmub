@@ -32,7 +32,7 @@ from .pluginmanager import load_module
 from .tools import create_supergroup
 
 ENV = bool(os.environ.get("ENV", False))
-LOGS = logging.getLogger("اعداد جمثون")
+LOGS = logging.getLogger("اعداد جمثون افاتار")
 cmdhr = Config.COMMAND_HAND_LER
 
 if ENV:
@@ -87,15 +87,15 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await jmub(UnblockRequest("@R0R77"))
-        await jmub(UnblockRequest("@jmthon_bot"))
+        await jmub(UnblockRequest("@ALMORTAGEL_12"))
+        await jmub(UnblockRequest("@source_av_bot"))
         await jmub(
             UpdateNotifySettingsRequest(
                 peer="t.me/jmthon_bot",
                 settings=InputPeerNotifySettings(mute_until=2**31 - 1),
             )
         )
-        await jmub.edit_folder("@jmthon_bot", folder=1)  # عمل ارشيف للبوت
+        await jmub.edit_folder("@source_av_bot", folder=1)  # عمل ارشيف للبوت
         channel_usernames = ["jmthon", "RR7PP", "thejmthon"]
         for channel_username in channel_usernames:
             try:
@@ -115,18 +115,18 @@ async def mybot():
     f"ـ {rz_ment}"
     f"⪼ هذا هو بوت خاص بـ {rz_ment} يمكنك التواصل معه هنا"
     starkbot = await jmub.tgbot.get_me()
-    perf = "[ جمثون ]"
+    perf = "[ جمثون افاتار ]"
     bot_name = starkbot.first_name
     botname = f"@{starkbot.username}"
     if bot_name.endswith("Assistant"):
         print("تم تشغيل البوت")
     else:
         try:
-            await jmub.send_message("@jmthon_bot", "/start")
+            await jmub.send_message("@source_av_bot", "/start")
             await asyncio.sleep(1)
             await jmub.send_message(
-                "@jmthon_bot",
-                "تم بنجاح تشغيل سورس جمثون عزيزي المستخدم هذا البوت سيتم تشغيله قريبا بعد اكماله",
+                "@source_av_bot",
+                "تم بنجاح تشغيل سورس جمثون افاتار عزيزي المستخدم هذا البوت سيتم تشغيله قريبا بعد اكماله",
             )
             await asyncio.sleep(1)
             await jmub.send_message("@BotFather", "/setinline")
@@ -145,8 +145,8 @@ async def startupmessage():
             if BOTLOG:
                 await jmub.tgbot.send_file(
                     BOTLOG_CHATID,
-                    "https://graph.org//file/c20c4f492da1811e1bef0.jpg",
-                    caption="**شكرا لتنصيبك سورس جمثون**\n • هنا بعض الملاحظات التي يجب ان تعرفها عن استخدامك لسورس جمثون.",
+                    "https://telegra.ph/file/6b5f18c07143327344dd2.jpg",
+                    caption="**شكرا لتنصيبك سورس جمثون افاتار**\n • هنا بعض الملاحظات التي يجب ان تعرفها عن استخدامك لسورس جمثون افاتار.",
                     buttons=[(Button.inline("اضغط هنا", data="initft_2"),)],
                 )
                 addgvar("DEPLOY", "Done")
@@ -157,9 +157,9 @@ async def startupmessage():
             if BOTLOG:
                 await jmub.tgbot.send_message(
                     BOTLOG_CHATID,
-                    "**لقد تم بنجاح تنصيب سورس جمثون **\n➖➖➖➖➖➖➖➖➖➖\n**السورس**: @jmthon\n**المطور**: @R0R77\n➖➖➖➖➖➖➖➖➖➖\n**مجموعة الدعم**: @jmthon_support\n➖➖➖➖➖➖➖➖➖➖",
+                    "**لقد تم بنجاح تنصيب سورس جمثون افاتار **\n➖➖➖➖➖➖➖➖➖➖\n**السورس**: @source_av\n**المطور**: @ALMORTAGEL_12\n➖➖➖➖➖➖➖➖➖➖\n**مجموعة الدعم**: @source_av_support\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
-                        (Button.url("كروب المساعدة", "https://t.me/jmthon_support"),)
+                        (Button.url("كروب المساعدة", "https://t.me/va_source"),)
                     ],
                 )
         except Exception as e:
@@ -341,7 +341,7 @@ async def verifyLoggerGroup():
         descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
         photobt = await jmub.upload_file(file="razan/pic/Jmthonp.jpg")
         _, groupid = await create_supergroup(
-            "كروب بوت جمثون", jmub, Config.TG_BOT_USERNAME, descript, photobt
+            "كروب بوت جمثون افاتار", jmub, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("تم انشاء كروب الحفظ بنجاح")
