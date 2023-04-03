@@ -7,7 +7,7 @@ from .bothseesion import bothseesion
 from .client import JmthonClient
 from .logger import logging
 
-LOGS = logging.getLogger("سورس جمثون")
+LOGS = logging.getLogger("سورس افاتار")
 __version__ = "2.10.6"
 
 loop = None
@@ -15,7 +15,7 @@ loop = None
 if Config.STRING_SESSION:
     session = bothseesion(Config.STRING_SESSION, LOGS)
 else:
-    session = "jmthon"
+    session = "AVATAR"
 
 try:
     jmub = JmthonClient(
@@ -54,7 +54,7 @@ except Exception as e:
 
 
 jmub.tgbot = tgbot = JmthonClient(
-    session="jmthonTgbot",
+    session="Almortagelbot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     loop=loop,
