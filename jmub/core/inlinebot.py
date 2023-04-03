@@ -53,7 +53,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"**▾∮ مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧᴊᴍᴛʜᴏɴⵧⵧⵧⵧⵧ⍣**\n[𝙅𝙈𝙏𝙃𝙊𝙉 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🧸♥](https://t.me/JMTHON)\n\n"
+    text = f"**▾∮ مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧAVATARⵧⵧⵧⵧⵧ⍣**\n[𝙎𝙊𝙐𝙍𝘾𝞝𖢻𝘼𝙑𝘼𝙏𝘼𝙍 🧸♥](https://t.me/source_av)\n\n"
     buttons = [
         (Button.inline("معلومات الملفات 🗂", data="check"),),
         (
@@ -228,7 +228,7 @@ async def inline_handler(event):
             buttons = [
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("DEV", "https://t.me/JMTHON"),
+                    Button.url("DEV", "https://t.me/source_av"),
                 )
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -421,7 +421,7 @@ async def inline_handler(event):
             _result = main_menu()
             result = builder.article(
                 title="jmub Help™",
-                description="**▾∮ قائمة التعليمات الخاصة ب جمثون **",
+                description="**▾∮ قائمة التعليمات الخاصة ب جمثون افاتار **",
                 text=_result[0],
                 buttons=_result[1],
                 link_preview=False,
@@ -557,10 +557,10 @@ async def inline_handler(event):
     else:
         buttons = [
             (
-                Button.url("قناة السورس", "t.me/JMTHON"),
+                Button.url("قناة السورس", "t.me/source_av"),
                 Button.url(
                     "المطور",
-                    "t.me/RR7PP",
+                    "t.me/ALMORTAGEL_12",
                 ),
             )
         ]
@@ -569,14 +569,14 @@ async def inline_handler(event):
             url=CATLOGO, size=0, mime_type="image/jpeg", attributes=[]
         )
         text, msg_entities = await event.client._parse_message_text(
-            "لجعل جمثون من نصيبك!", "md"
+            "لجعل جمثون افاتار من نصيبك!", "md"
         )
         result = types.InputBotInlineResult(
             id=str(uuid4()),
             type="photo",
-            title="[𝙅𝙈𝙏𝙃𝙊𝙉 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🧸♥](https://t.me/JMTHON)",
+            title="[𝙎𝙊𝙐𝙍𝘾𝞝𖢻𝘼𝙑𝘼𝙏𝘼𝙍 🧸♥](https://t.me/source_av)",
             description="لتنصيبه لك",
-            url="t.me/JMTHON",
+            url="t.me/source_av",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
