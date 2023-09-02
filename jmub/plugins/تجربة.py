@@ -10,7 +10,7 @@ from . import *
 async def hi(event):
     await edit_or_reply(
         event,
-        "**[ . ᯏAVATAR - ᥴ𝗆𝖽 ᭡ .](t.me/jmthon)\n✦┅━╍━╍╍━━╍━━╍━┅✦**\n\n الامر: `.تجربة` + كود برمجي\n- يقوم بتشغيل الكود و أظهار النتيجة",
+        "**[ . ᯏAlmortagel - ᥴ𝗆𝖽 ᭡ .](t.me/AlmortagelTech)\n✦┅━╍━╍╍━━╍━━╍━┅✦**\n\n الامر: `.تجربة` + كود برمجي\n- يقوم بتشغيل الكود و أظهار النتيجة",
         link_preview=False,
     )
 
@@ -25,7 +25,7 @@ async def _(event):
         .replace("sendfile", "send_file")
         .replace("editmessage", "edit_message")
     )
-    jmthon = await edit_or_reply(event, "**- جار التشغيل أنتظر قليلا**")
+    jmub = await edit_or_reply(event, "**- جار التشغيل أنتظر قليلا**")
     old_stderr = sys.stderr
     old_stdout = sys.stdout
     redirected_output = sys.stdout = io.StringIO()
@@ -52,7 +52,7 @@ async def _(event):
         f"**•  الكود : **\n```{cmd}``` \n\n**•  النتيجة : **\n```{evaluation}``` \n"
     )
     await edit_or_reply(
-        jmthon,
+        jmub,
         text=final_output,
         aslink=True,
         linktext=f"**•  الكود : **\n```{cmd}``` \n\n**•  النتيجة : **\n",

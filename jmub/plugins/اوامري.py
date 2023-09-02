@@ -9,7 +9,7 @@ from razan.CMD.aomari import *
 from ..Config import Config
 from ..core import check_owner
 
-ROE = """** اهلا بك عزيزي المستخدم في قائمة اوامر جمثون افاتار
+ROE = """** اهلا بك عزيزي المستخدم في قائمة اوامر المرتجل
 من هنا يمكنك تصفح جميع الاوامر المتاحة **"""
 
 ROZADM = "من هنا يمكنك ايجاد جميع"
@@ -25,7 +25,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         await jmub.get_me()
         if query.startswith("اوامري") and event.query.user_id == jmub.uid:
             buttons = [
-                [Button.inline("معلومات جمثون افاتار", data="AOMRDB")],
+                [Button.inline("معلومات المرتجل", data="AOMRDB")],
                 [
                     Button.inline("البوت", data="BOTCMD4"),
                     Button.inline("الكروب", data="admincmd_s"),
@@ -66,7 +66,7 @@ async def repo(event):
 @check_owner
 async def _(event):
     butze = [
-        [Button.inline("معلومات جمثون افاتار", data="AOMRDB")],
+        [Button.inline("معلومات المرتجل", data="AOMRDB")],
         [
             Button.inline("البوت", data="BOTCMD4"),
             Button.inline("الكروب", data="admincmd_s"),
@@ -164,7 +164,7 @@ async def varssett(event):
 الاستخدام : تقوم بالرد على الرمز بالامر   `.وضع الرمز`
 
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="namevar")],
         ],
@@ -186,7 +186,7 @@ async def varssett(event):
 * كيفية جلب رابط الصورة؟
 -بالرد على الصورة المراد استخراج منها الرابط ب  `.تلكراف ميديا`
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="namevar")],
         ],
@@ -196,15 +196,15 @@ async def varssett(event):
 @jmub.tgbot.on(CallbackQuery(data=re.compile(rb"AOMRDB")))
 async def varssett(event):
     await event.edit(
-        """اهلا بك في قائمة اوامر سورس افاتارهذه بعض المعلومات عن جمثون افاتار:
+        """اهلا بك في قائمة اوامر سورس افاتارهذه بعض المعلومات عن المرتجل:
 
 - سورس افاتار يمتلك اكثر من 100 أمر 
 - افاتار هو افضل سورس عربي يتميز بالحماية
 
 قناة الكلايش:  @av_klesh
-قناة السورس: @source_av
+قناة السورس: @AlmortagelTech
 قناة الشرح: @QQ_XxXxX
-مجموعة المساعدة: @va_source""",
+مجموعة المساعدة: @AlmortagelTech2""",
         buttons=[
             [Button.inline("رجوع", data="namevar")],
         ],
@@ -224,7 +224,7 @@ async def varssett(event):
 
 *يمكنك استخدا الزخرفة او اللغة الانكليزية او العربية الخ..
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="namevar")],
         ],
@@ -248,7 +248,7 @@ async def varssett(event):
 .زخرفة الوقت 9
 
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="namevar")],
         ],
@@ -268,7 +268,7 @@ async def varssett(event):
 
 *يمكنك استخدا الزخرفة او اللغة الانكليزية او العربية الخ..
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="namevar")],
         ],
@@ -307,7 +307,7 @@ async def varssett(event):
 
 * يمكنك كتابة اي كليشة مثلا: عزيزي المستخدم تم حظرك 
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="pmvars")],
         ],
@@ -326,7 +326,7 @@ async def varssett(event):
 الاستخدام : تقوم بالرد على عدد التحذيرات كرقم  بالامر   `.وضع عدد التحذيرات `
 
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="pmvars")],
         ],
@@ -346,7 +346,7 @@ async def varssett(event):
 
 * يمكنك الحصول على  كليشة جاهزة من هذه القناة @av_klesh
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="pmvars")],
         ],
@@ -367,7 +367,7 @@ async def varssett(event):
 * كيفية جلب رابط الصورة؟
 -بالرد على الصورة المراد استخراج منها الرابط ب  `.تلكراف ميديا`
 ملاحظة : **يمكنك استخدام الاوامر في اي دردشة او محادثة**
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="pmvars")],
         ],
@@ -403,7 +403,7 @@ async def varssett(event):
 * كيفية جلب رابط الصورة؟
 -بالرد على الصورة المراد استخراج منها الرابط ب  `.تلكراف ميديا`
 ملاحظة : **يمكنك استخدام الاوامر في اي دردشة او محادثة**
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="alivevar")],
         ],
@@ -422,7 +422,7 @@ async def varssett(event):
 
 * يمكنك الحصول على  كليشة جاهزة من هذه القناة @av_klesh
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="alivevar")],
         ],
@@ -441,7 +441,7 @@ async def varssett(event):
 الاستخدام : تقوم بالرد على الرمز التي تريد وضعه بالامر   `.وضع رمز الفحص `
 
 ملاحظة : يمكنك استخدام الاوامر في اي دردشة او محادثة
-اوامر فارات سورس افاتار@source_av""",
+اوامر فارات سورس افاتار@AlmortagelTech""",
         buttons=[
             [Button.inline("رجوع", data="alivevar")],
         ],

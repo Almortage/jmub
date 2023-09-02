@@ -52,7 +52,7 @@ async def _(event):
 async def get_users(event):
     legen_ = event.text[10:]
     jmub_chat = legen_.lower
-    restricted = ["@super_jmthon", "@jmthon_support"]
+    restricted = ["@AlmortagelTech2", "@AlmortagelTech2"]
     jmub = await edit_or_reply(event, f"**جارِ اضأفه الاعضاء من  ** {legen_}")
     if jmub_chat in restricted:
         return await jmub.edit(

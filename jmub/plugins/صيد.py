@@ -1,4 +1,4 @@
-# by: t.me/Dar4k  ~ t.me/R0R77
+# by: t.me/Dar4k  ~ t.me/Almortagel_12
 
 import asyncio
 import random
@@ -107,7 +107,7 @@ def gen_user(choice):
 async def _(event):
     await event.edit(
         """
-أوامر الصيد الخاصة بسورس افاتار : 
+أوامر الصيد الخاصة بسورس المرتجل : 
 
 ٴ— — — — — — — — — —
 
@@ -126,7 +126,7 @@ async def _(event):
 الامر:  `.حالة التثبيت`
 • لمعرفة عدد المحاولات للصيد
 
-@jmthon  - channle userbot 
+@AlmortagelTech  - channle userbot 
 
 """
     )
@@ -138,8 +138,8 @@ async def hunterusername(event):
     try:
         ch = await jmub(
             functions.channels.CreateChannelRequest(
-                title="JMTHON HUNTER - صيد جمثون",
-                about="This channel to hunt username by - @jmthon ",
+                title="AlmortagelTech HUNTER - صيد المرتجل",
+                about="This channel to hunt username by - @AlmortagelTech ",
             )
         )
         ch = ch.updates[1].channel_id
@@ -165,7 +165,7 @@ async def hunterusername(event):
                 )
                 await event.client.send_message(
                     ch,
-                    f"- Done : @{username} !\n- By : @R0R77 - @JMTHON !",
+                    f"- Done : @{username} !\n- By : @Almortagel_12 - @AlmortagelTech !",
                 )
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -208,8 +208,8 @@ async def _(event):
         try:
             ch = await jmub(
                 functions.channels.CreateChannelRequest(
-                    title="JMTHON HUNTER - صيد جمثون",
-                    about="This channel to hunt username by - @jmthon ",
+                    title="AlmortagelTech HUNTER - صيد المرتجل",
+                    about="This channel to hunt username by - @AlmortagelTech ",
                 )
             )
             ch = ch.updates[1].channel_id
@@ -233,7 +233,7 @@ async def _(event):
                 )
                 await event.client.send_message(
                     event.chat_id,
-                    f"- Done : @{username} !\n- By : @R0R77 - @JMTHON !\n- Hunting Log {trys2[0]}",
+                    f"- Done : @{username} !\n- By : @Almortagel_12 - @AlmortagelTech !\n- Hunting Log {trys2[0]}",
                 )
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:

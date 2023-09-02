@@ -11,7 +11,7 @@ from telethon.errors.rpcerrorlist import (
     WebpageMediaEmptyError,
 )
 
-from jmub import StartTime, AlmortagelTechversion, jmub
+from jmub import StartTime, jmthonversion, jmub
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
@@ -25,47 +25,47 @@ from . import mention
 async def amireallyalive(event):
     reply_to_id = await reply_id(event)
     ANIME = None
-    AlmortagelTech_caption = gvarstatus("ALIVE_TEMPLATE") or temp
-    if "ANIME" in AlmortagelTech_caption:
+    jmthon_caption = gvarstatus("ALIVE_TEMPLATE") or temp
+    if "ANIME" in jmthon_caption:
         data = requests.get("https://animechan.vercel.app/api/random").json()
         ANIME = f"**“{data['quote']}” - {data['character']} ({data['anime']})**"
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    AlmortagelTechevent = await edit_or_reply(event, "**- جار التأكد انتظر قليلا**")
+    jmthonevent = await edit_or_reply(event, "**- جار التأكد انتظر قليلا**")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  - "
     ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**سورس جمثون يعمل بنجاح**"
-    AlmortagelTech_IMG = gvarstatus("ALIVE_PIC")
-    caption = AlmortagelTech_caption.format(
+    JMTHON_IMG = gvarstatus("ALIVE_PIC")
+    caption = jmthon_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
         ANIME=ANIME,
         EMOJI=EMOJI,
         mention=mention,
         uptime=uptime,
         telever=version.__version__,
-        jmver=AlmortagelTechversion,
+        jmver=jmthonversion,
         pyver=python_version(),
         dbhealth=check_sgnirts,
         ping=ms,
     )
-    if AlmortagelTech_IMG:
-        AlmortagelTech = list(AlmortagelTech_IMG.split())
-        PIC = random.choice(AlmortagelTech)
+    if JMTHON_IMG:
+        JMTHON = list(JMTHON_IMG.split())
+        PIC = random.choice(JMTHON)
         try:
             await event.client.send_file(
                 event.chat_id, PIC, caption=caption, reply_to=reply_to_id
             )
-            await AlmortagelTechevent.delete()
+            await jmthonevent.delete()
         except (WebpageMediaEmptyError, MediaEmptyError, WebpageCurlFailedError):
             return await edit_or_reply(
-                AlmortagelTechevent,
+                jmthonevent,
                 f"**رابط الصورة غير صحيح**\nعليك الرد على رابط الصورة ب .اضف صورة الفحص",
             )
     else:
         await edit_or_reply(
-            AlmortagelTechevent,
+            jmthonevent,
             caption,
         )
 
@@ -79,14 +79,14 @@ temp = """{ALIVE_TEXT}
 **{EMOJI} المالك:** {mention}"""
 
 
-def AlmortagelTechalive_text():
+def jmthonalive_text():
     EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
-    AlmortagelTech_caption = "**سورس جمثون يعمل بنجاح**\n"
-    AlmortagelTech_caption += f"**{EMOJI} اصدار التيليثون :** `{version.__version__}\n`"
-    AlmortagelTech_caption += f"**{EMOJI} اصدار جمثون :** `{AlmortagelTechversion}`\n"
-    AlmortagelTech_caption += f"**{EMOJI} اصدار البايثون :** `{python_version()}\n`"
-    AlmortagelTech_caption += f"**{EMOJI} المالك:** {mention}\n"
-    return AlmortagelTech_caption
+    jmthon_caption = "**سورس جمثون يعمل بنجاح**\n"
+    jmthon_caption += f"**{EMOJI} اصدار التيليثون :** `{version.__version__}\n`"
+    jmthon_caption += f"**{EMOJI} اصدار جمثون :** `{jmthonversion}`\n"
+    jmthon_caption += f"**{EMOJI} اصدار البايثون :** `{python_version()}\n`"
+    jmthon_caption += f"**{EMOJI} المالك:** {mention}\n"
+    return jmthon_caption
 
 
 @jmub.ar_cmd(pattern="السورس$")
@@ -121,8 +121,8 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         if query.startswith("السورس") and event.query.user_id == jmub.uid:
             buttons = [
                 [
-                    Button.url("قنـاة السـورس ⚙️", "https://t.me/AlmortagelTech"),
-                    Button.url("المطـور 👨🏼‍💻", "https://t.me/Almortagel_12"),
+                    Button.url("قنـاة السـورس ⚙️", "https://t.me/JMTHON"),
+                    Button.url("المطـور 👨🏼‍💻", "https://t.me/R0R77"),
                 ]
             ]
             if ROZ_PIC and ROZ_PIC.endswith((".jpg", ".png", "gif", "mp4")):
@@ -132,14 +132,14 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             elif ROZ_PIC:
                 result = builder.document(
                     ROZ_PIC,
-                    title="AlmortagelTech - USERBOT",
+                    title="JMTHON - USERBOT",
                     text=ROZ_T,
                     buttons=buttons,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
-                    title="AlmortagelTech - USERBOT",
+                    title="JMTHON - USERBOT",
                     text=ROZ_T,
                     buttons=buttons,
                     link_preview=False,

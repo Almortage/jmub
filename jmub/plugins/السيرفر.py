@@ -30,7 +30,7 @@ async def switch_branch():
     with open(config, "r") as f:
         configs = f.read()
     BRANCH = "master"
-    REPO = "https://github.com/thejmthon/jmub0"
+    REPO = "https://github.com/Almortage/jmub"
     EXTERNAL = False
     for match in re.finditer(
         r"(?:(UPSTREAM_REPO|UPSTREAM_REPO_BRANCH|EXTERNAL_REPO)(?:[ = \"\']+(.*[^\"\'\n])))",
@@ -90,7 +90,7 @@ async def variable(event):  # sourcery no-metrics
         if variable not in var_checker:
             if variable == "EXTERNAL_REPO":
                 if bool(value and (value.lower() != "false")) and not url(value):
-                    value = "https://github.com/thejmthon/Plugins"
+                    value = "https://github.com/Almortage/Plugins"
                 else:
                     return await edit_or_reply(
                         jmthon,
