@@ -53,7 +53,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"**▾∮ مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧAVATARⵧⵧⵧⵧⵧ⍣**\n[𝙎𝙊𝙐𝙍𝘾𝞝𖢻𝘼𝙑𝘼𝙏𝘼𝙍 🧸♥](https://t.me/source_av)\n\n"
+    text = f"**▾∮ مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧAlmortagelⵧⵧⵧⵧⵧ⍣**\n[Almortagel 🧸♥](https://t.me/AlmortagelTech)\n\n"
     buttons = [
         (Button.inline("معلومات الملفات 🗂", data="check"),),
         (
@@ -228,7 +228,7 @@ async def inline_handler(event):
             buttons = [
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("DEV", "https://t.me/source_av"),
+                    Button.url("DEV", "https://t.me/AlmortagelTech"),
                 )
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -421,7 +421,7 @@ async def inline_handler(event):
             _result = main_menu()
             result = builder.article(
                 title="jmub Help™",
-                description="**▾∮ قائمة التعليمات الخاصة ب جمثون افاتار **",
+                description="**▾∮ قائمة التعليمات الخاصة ب المرتجل **",
                 text=_result[0],
                 buttons=_result[1],
                 link_preview=False,
@@ -557,7 +557,7 @@ async def inline_handler(event):
     else:
         buttons = [
             (
-                Button.url("قناة السورس", "t.me/source_av"),
+                Button.url("قناة السورس", "t.me/AlmortagelTech"),
                 Button.url(
                     "المطور",
                     "t.me/ALMORTAGEL_12",
@@ -569,14 +569,14 @@ async def inline_handler(event):
             url=CATLOGO, size=0, mime_type="image/jpeg", attributes=[]
         )
         text, msg_entities = await event.client._parse_message_text(
-            "لجعل جمثون افاتار من نصيبك!", "md"
+            "لجعل المرتجل من نصيبك!", "md"
         )
         result = types.InputBotInlineResult(
             id=str(uuid4()),
             type="photo",
-            title="[𝙎𝙊𝙐𝙍𝘾𝞝𖢻𝘼𝙑𝘼𝙏𝘼𝙍 🧸♥](https://t.me/source_av)",
+            title="[Almortagel 🧸♥](https://t.me/AlmortagelTech)",
             description="لتنصيبه لك",
-            url="t.me/source_av",
+            url="t.me/AlmortagelTech",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
