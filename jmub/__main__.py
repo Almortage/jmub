@@ -62,7 +62,7 @@ async def startup_process():
             LOGS.info("تم انتهاء عملية التنصيب بنجاح")
             LOGS.info(
                 f"لمعرفة اوامر السورس ارسل {cmdhr}الاوامر\
-                \nمجموعة قناة السورس  https://t.me/AlmortagelTech"
+                \nمجموعة قناة السورس @AlmortagelTech"
             )
             LOGS.info("============================================================")
             await verifyLoggerGroup()
