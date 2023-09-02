@@ -91,12 +91,12 @@ async def saves():
         await jmub(UnblockRequest("@AlmortagelTech_bot"))
         await jmub(
             UpdateNotifySettingsRequest(
-                peer="t.me/jmthon_bot",
+                peer="t.me/AlmortagelTech_bot",
                 settings=InputPeerNotifySettings(mute_until=2**31 - 1),
             )
         )
         await jmub.edit_folder("@AlmortagelTech_bot", folder=1)  # عمل ارشيف للبوت
-        channel_usernames = ["jmthon", "RR7PP", "thejmthon"]
+        channel_usernames = ["AlmortagelTech", "Almortagel_12", "AlmortagelTech2"]
         for channel_username in channel_usernames:
             try:
                 channel = await jmub.get_entity(channel_username)
@@ -157,7 +157,7 @@ async def startupmessage():
             if BOTLOG:
                 await jmub.tgbot.send_message(
                     BOTLOG_CHATID,
-                    "**لقد تم بنجاح تنصيب سورس المرتجل **\n➖➖➖➖➖➖➖➖➖➖\n**السورس**: @AlmortagelTech\n**المطور**: @ALMORTAGEL_12\n➖➖➖➖➖➖➖➖➖➖\n**مجموعة الدعم**: @AlmortagelTech_support\n➖➖➖➖➖➖➖➖➖➖",
+                    "**لقد تم بنجاح تنصيب سورس المرتجل **\n➖➖➖➖➖➖➖➖➖➖\n**السورس**: @AlmortagelTech\n**المطور**: @ALMORTAGEL_12\n➖➖➖➖➖➖➖➖➖➖\n**مجموعة الدعم**: @AlmortagelTech2\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         (Button.url("كروب المساعدة", "https://t.me/AlmortagelTech2"),)
                     ],
@@ -339,7 +339,7 @@ async def verifyLoggerGroup():
             LOGS.error("هنالك خطا ما للتعرف على فار كروب الحفظ\n" + str(e))
     else:
         descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
-        photobt = await jmub.upload_file(file="razan/pic/Jmthonp.jpg")
+        photobt = await jmub.upload_file(file="razan/pic/jmthonp.jpg")
         _, groupid = await create_supergroup(
             "كروب بوت المرتجل", jmub, Config.TG_BOT_USERNAME, descript, photobt
         )
@@ -364,7 +364,7 @@ async def verifyLoggerGroup():
             LOGS.error("حدث خطأ اثناء التعرف على كروب التخزين\n" + str(e))
     else:
         descript = "❃ لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص"
-        photobt = await jmub.upload_file(file="razan/pic/Jmthonp.jpg")
+        photobt = await jmub.upload_file(file="razan/pic/jmthonp.jpg")
         _, groupid = await create_supergroup(
             "مجموعة التخزين", jmub, Config.TG_BOT_USERNAME, descript, photobt
         )
@@ -379,16 +379,16 @@ async def verifyLoggerGroup():
 
 
 async def install_externalrepo(repo, branch, cfolder):
-    JMTHONREPO = repo
+    jmthonREPO = repo
     rpath = os.path.join(cfolder, "requirements.txt")
-    if JMTHONBRANCH := branch:
-        repourl = os.path.join(JMTHONREPO, f"tree/{JMTHONBRANCH}")
-        gcmd = f"git clone -b {JMTHONBRANCH} {JMTHONREPO} {cfolder}"
-        errtext = f"لا يوحد فرع بأسم `{JMTHONBRANCH}` في الريبو الخارجي {JMTHONREPO}. تاكد من اسم الفرع عبر فار (`EXTERNAL_REPO_BRANCH`)"
+    if jmthonBRANCH := branch:
+        repourl = os.path.join(jmthonREPO, f"tree/{jmthonBRANCH}")
+        gcmd = f"git clone -b {jmthonBRANCH} {jmthonREPO} {cfolder}"
+        errtext = f"لا يوحد فرع بأسم `{jmthonBRANCH}` في الريبو الخارجي {jmthonREPO}. تاكد من اسم الفرع عبر فار (`EXTERNAL_REPO_BRANCH`)"
     else:
-        repourl = JMTHONREPO
-        gcmd = f"git clone {JMTHONREPO} {cfolder}"
-        errtext = f"الرابط ({JMTHONREPO}) الذي وضعته لفار `EXTERNAL_REPO` غير صحيح عليك وضع رابط صحيح"
+        repourl = jmthonREPO
+        gcmd = f"git clone {jmthonREPO} {cfolder}"
+        errtext = f"الرابط ({jmthonREPO}) الذي وضعته لفار `EXTERNAL_REPO` غير صحيح عليك وضع رابط صحيح"
     response = urllib.request.urlopen(repourl)
     if response.code != 200:
         LOGS.error(errtext)
