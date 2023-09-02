@@ -111,10 +111,10 @@ async def bot_start(event):
                         \nيمكنك التواصل مع ي من خلال هذا البوت"
         buttons = [
             (
-                Button.url("السورس", "https://t.me/source_av"),
+                Button.url("السورس", "https://t.me/AlmortagelTech"),
                 Button.url(
                     "الشرح",
-                    "https://t.me/QQ_XxXxX/38",
+                    "https://t.me/AlmortagelTech/38",
                 ),
             )
         ]
@@ -122,7 +122,7 @@ async def bot_start(event):
         start_msg = "**اهلا بك عزيزي مالك البوت هذه هي اعدادات البوت الخاصة بك**"
         buttons = [
             [
-                Button.url("• السورس •", "https://t.me/source_av"),
+                Button.url("• السورس •", "https://t.me/AlmortagelTech"),
             ],
             [
                 Button.inline("• اوامر البوت •", data="CMDBOT"),
